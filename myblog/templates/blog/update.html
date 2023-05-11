@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+   {% block content %}
+
+
+    <div class="col-md-7 mx-auto text-center">
+        <h1><strong>{{ article.title }}</strong></h1>
+        <br>
+        <small>{{ article.date_added }}</small>
+        <strong>{{ article.intro }}</strong>
+        <p style= "color:rgb(42, 51, 42); text-align: justify; font-family: arial, helvetica, sans-serif;"> {{ article.body }} </p>
+        
+        <hr>
+        <br><br>
+        <h3><strong> Commentaires </strong></h3>
+
+        {% for Comment in Comment %} 
+        <article>
+            <strong class="text_align_left text-success">{{ Comment.name }}</strong><small>{{ Comment.date_added }}</small>
+            <p style= "font-family: arial, helvetica, sans-serif;"> {{ Comment.body }}</p>
+        {% empty %}
+            <p>Pas de Commentaires</p>
+
+        </article>
+        {% endfor %}
+        <br>
+        <h3 class="mx-5"><strong> Ajouter un nouveau commentaire</strong></h3>
+        <form action="" method="POST" class="form_control form_control_lg">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn text-white bg-success">Commenter</button>
+        </form>
+    </div>
+
+    {% endblock %}

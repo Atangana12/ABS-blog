@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+{% if post %}
+ <div class="row d_flex">
+    {% for post in post %}
+        <div class=" col-md-4">
+            <div class="latest">
+                <figure><img src="{{ post.image.url }}" alt="#"/></figure>
+                
+                <span>{{ post.date_added}}</span>
+                <div class="nostrud">
+                    <h3>{{ post.title }} </h3>
+                    <p>{{ post.intro}}</p>
+                    <a class="read_more" href="{% url 'detailView'  post.slug %}">Lire Plus</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+ </div>
+{% else %}
+ <p><center><strong> Ce post n'existe pas</center> </strong></p>
+{% endif %}
+{% endblock %}

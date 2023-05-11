@@ -1,0 +1,181 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>ABS blog</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{%static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{%static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{%static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+      <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.min.css' %}">
+      <!--[if lt IE 9]>
+      <script src="{%static 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js' %}"></script>
+      <script src="{%static 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{%static 'images/loading.gif' %}" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <div class="full_bg">
+         <!-- header -->
+         <header class="header-area">
+            <div class="container">
+               <div class="row d_flex">
+                  <div class=" col-md-3 col-sm-3">
+                     <div class="logo">
+                        <a href="{% static 'index.html' %}">ABS blog</a>
+                     </div>
+                  </div>
+                  <div class="col-md-9 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a class="active" href="{% url 'acceuil' %}">Acceuil</a></li>
+                              <li><a href="{% url 'about.html' %}">A Propos de Nous</a></li>
+                              
+                              
+                              <li>
+                                 <form action="{% url 'search' %}" method="GET">
+                                    <input type="text" name="q" id="search-input">
+                                    <button type="submit" >
+                                       <i class="fa fa-search" aria-hidden="false"></i>
+                                    </button>
+                                 </form>
+                                 <span></span>
+                           </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- end header inner -->
+
+       
+         </div>
+      </div>
+      
+
+
+      <!-- blog post -->
+      
+      <div class="blog">
+         {% block content %}
+
+         {% endblock %}
+      </div>
+      
+      <!-- end blog post -->
+
+
+
+      
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-7">
+                     <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <h3>A Propos</h3>
+                              <p> Nous somme étudiant à l'école National Supèrieur Polytechnique de Yaoundé (ENSPY).
+                                 En filière Humanité Numérique Ingénieur niveau 2</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Blog</h3>
+                              <p>Blog crée sous le thème alimentation santé beauté, pour la diffusion de nombruex articles.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Menu</h3>
+                              <ul class="menu_footer">
+                                 <li><a href="{% url 'index.html' %}">Acceuil</a></li>
+                                 <li><a href="{% url 'about.html' %}">A Propos de Nous</a></li>
+                                
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3  text_align_left">
+                              <h3>FAQ </h3>
+                              <ul class="top_infomation">
+                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
+                                    +237 672780462
+                                 </li>
+                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
+                                    +237 693828299
+                                 </li>
+
+                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:espoirade631@gmail.com" target="_blank">espoirade631@gmail.com</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="follow text_align_center">
+                           <h3>Nous Suivre</h3>
+                           <ul class="social_icon ">
+                              <li><a href="https://www.facebook.com/profile.php?id=100091436261231"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                              <li><a href="https://instagram.com/abs_blogs?igshid=NTc4MTlwNjQ2YQ=="><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <p>© 2023 Tout Droits Reservé...<a href="mailto:espoirade631@gmail.com"> ABS blog</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>
+

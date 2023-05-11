@@ -1,0 +1,75 @@
+{% extends 'blog/base.html' %}
+{% load static %}  
+<!-- body -->
+  {% block content %} 
+   <body class="main-layout inner_page">
+      
+      <!-- end banner -->
+      <!-- about -->
+      <div class="about">
+         <div class="container_width">
+            <div class="row d_flex grig">
+               <div class="col-md-6">
+                  <div class="about_img">
+                     <figure><img src="{% static 'images/IMG_0835.jpg' %}" alt="#"/>
+                     </figure>
+                  </div>
+               </div>
+               <div class="col-md-6 order">
+                  <div class="titlepage text_align_left">
+                     <h2>A Propos de Nous</h2>
+                     <p> Nous somme étudiant à l'école National Supèrieur Polytechnique de Yaoundé (ENSPY).</p>
+                     <p> En filière Humanité Numérique Ingénieur niveau 2. Nous nous présentons comme suite :</p>
+                  </div>
+               </div>
+               <div class="team_section">
+                  <h2> <center> Nos Membres Sont Comme Suite :</center> </h2>
+                  <br><br>
+                  <div class="team_member">
+                     <figure><img src="{% static 'images/IMG_0835.jpg' %}" alt="#" class="team_img"></figure>
+                     <h3>Mme NINKO LIDWINE</h3>
+                     <h2>Coordonatrice de ce projet de blog</h2>
+                     <p>Enseignante à L'ENSPY. Mme NINKO dispens le cour de Web Social et Ubiquité Numérique et Analse de Donnée 
+                        en Filière Humanité Numérique Ingénieur niveau 2, d'ou vient l'idée de ce projet.</p>
+                  </div>
+                  <div class="team_member">
+                     <figure><img src="{% static 'images/IMG_0835.jpg' %}" alt="#" class="team_img"></figure>
+                     <h3>ADE</h3>
+                     <h2>Etudiant</h2>
+                     <p>Etudiant en deuxième année à L'ENSPY. Filière Humanité Numérique Ingénieur niveau 2.
+                        Créateur du blog ABS blog et administrateur de la page facebook.</p>
+                  </div>
+                  <div class="team_member">
+                    <figure> <img src="{% static 'images/IMG_0835.jpg' %}" alt="#" class="team_img"></figure>
+                     <h3>LYNDA</h3>
+                     <h2>Etudiante</h2>
+                     <p>Etudiant en deuxième année à L'ENSPY. Filière Humanité Numérique Ingénieur niveau
+                         2. Céatrice et administrateur de la page facebook de ce projet ABS blog.</p>
+                  </div>
+                  <div class="team_member">
+                     <figure><img src="{% static 'images/IMG_0835.jpg' %}" alt="#" class="team_img"></figure>
+                     <h3>CABRELLE</h3>
+                     <h2>Etudiante</h2>
+                     <p>Etudiant en deuxième année à L'ENSPY. Filière Humanité Numérique Ingénieur niveau 2.
+                        Chargé du partage des publications sur diverse réseau sociaux.</p>
+                  </div>
+                  <div class="team_member">
+                    <figure> <img src="{% static 'images/IMG_0835.jpg' %}" alt="#" class="team_img"></figure>
+                     <h3>MARTIAL</h3>
+                     <h2>Etudiant</h2>
+                     <p>Etudiant en deuxième année à L'ENSPY. Filière Humanité Numérique Ingénieur niveau 2.
+                        Membre du projet.</p>
+                  </div>
+                  <div class="team_member">
+                     <figure><img src="{% static 'images/IMG_0835.jpg' %}" alt="#" class="team_img"></figure>
+                     <h3>RACHELLE</h3>
+                     <h2>Etudiante</h2>
+                     <p>Etudiant en deuxième année à L'ENSPY. Filière Humanité Numérique Ingénieur niveau 2.
+                        Membre du projet.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+{% endblock %}
